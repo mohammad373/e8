@@ -1,6 +1,7 @@
 # 
 
 
+
 import os
 import time
 import requests
@@ -11,7 +12,6 @@ from colorama import Fore
 
 def __target1__():
     os.system("clear")
-
     print(Fore.RED +"""
         ///////////////////////
         //////////////////////
@@ -51,13 +51,14 @@ def __target1__():
     r = requests.get(target)
     time = datetime.datetime.now()
     while True:
-         coun = 1   
+         coun = ["m"]
+         len1 = len(coun) 
          if r.status_code == 404 or r.status_code == 500:
              print(Fore.YELLOW + "[ " + Fore.RED + coun+ Fore.YELLOW + " ]" + Fore.BLUE + " ~ " + Fore.RED + target + Fore.BLUE  + "  |  " + Fore.RED + time)
              coun += 1
          if r.status_code == 200:
-             print(Fore.BLUE + coun + Fore.BLUE + " ~ " + Fore.GREEN + target + Fore.YELLOW + "  |  " + Fore.GREEN + time)
-             coun += 1
+             print(Fore.BLUE + len1 + Fore.BLUE + " ~ " + Fore.GREEN + target + Fore.YELLOW + "  |  " + Fore.GREEN + time)
+             coun += "m"
          if coun == 10000:
             time.sleep(0.1)
             sys.exit()
