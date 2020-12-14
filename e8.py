@@ -11,7 +11,7 @@ from colorama import Fore
 
 def __target1__():
     os.system("clear")
-    time.sleep(0.5)
+
     print(Fore.RED +"""
         ///////////////////////
         //////////////////////
